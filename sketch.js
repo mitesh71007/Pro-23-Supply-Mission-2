@@ -104,40 +104,36 @@ function draw() {
 }
 
 function keyPressed() {
-	if (keyCode === DOWN_ARROW) {
-	   Matter.Body.setStatic(packageBody,false);
-	   
-	 }
 
-	 if (keyCode === DOWN_ARROW) {
-		Matter.Body.setStatic(packageBody1,false);
-		
-	  }
-
-	  if (keyCode === DOWN_ARROW) {
-		Matter.Body.setStatic(packageBody2,false);
-		
-	  }
-   }
-
-if (keyCode === DOWN_ARROW) {
-	   // Look at the hints in the document and understand how to make the package body fall only on press of the Down arrow key.
-	   Matter.Body.setStatic(packageBody,false);
-	   
-	 }
-	 if (keyCode === LEFT_ARROW) {
+	if (keyCode === LEFT_ARROW) {
 		// Look at the hints in the document and understand how to make the package body fall only on press of the Down arrow key.
 		helicopterSprite.x = helicopterSprite.x - 20;
 		translation = {x:-20, y:0}
-		matter.Body.translate(packageBody, translation);
+		matter.Body.translate(packageBody1, translation);
 		
 	  }
 	  if (keyCode === RIGHT_ARROW) {
 		// Look at the hints in the document and understand how to make the package body fall only on press of the Down arrow key.
 		helicopterSprite.x = helicopterSprite.x + 20;
 		translation = {x:20, y:0}
-		matter.Body.translate(packageBody, translation);
-
+		matter.Body.translate(packageBody2, translation);
+   
 	  }
-	  
-   }
+
+	if (keyCode === DOWN_ARROW) {
+		Matter.Body.setStatic(packageBody,false);
+		
+	  }
+ 
+	  if (keyCode === DOWN_ARROW) {
+		 Matter.Body.setStatic(packageBody1,false);
+		 
+	   }
+ 
+	   if (keyCode === DOWN_ARROW) {
+		 Matter.Body.setStatic(packageBody2,false);
+		 
+	   }
+}
+
+	
